@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-//import {UiModule} from './ui/ui.module';
+import { FirebaseModule } from './shared/firebase.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +11,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    //UiModule
+    FirebaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 <div class="container d-flex align-items-center justify-content-center" style="height: 100vh">
-<form class="border p-5">
+<form [formGroup]="registerUserForm" class="border p-5">
     <h2>Registro</h2>
     <div class="form-row mt-3">
       <div class="form-group col-md-6">
@@ -12,12 +12,12 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="inputAddress">Correo</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="Correo">
+      <label for="inputEmail">Correo</label>
+      <input type="text" class="form-control" formControlName="email" id="inputEmail" placeholder="Correo">
     </div>
     <div class="form-group">
-      <label for="inputAddress2">Contraseña Nueva</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Contraseña Nueva">
+      <label for="inputPassword">Contraseña Nueva</label>
+      <input type="password" class="form-control" id="inputPassword" formControlName="password" placeholder="Contraseña Nueva">
     </div>
     <div class="form-row">
       <div class="form-group col-md-4">
@@ -64,7 +64,7 @@
         </div>
       </div>
     <div class="d-flex align-items-center justify-content-center">
-    <button type="submit" class="btn btn-success">Registrar</button>
+    <button type="submit" class="btn btn-success" (click)="register()">Registrar</button>
     </div>
   </form>
   </div>
